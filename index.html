@@ -1,0 +1,97 @@
+here<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>For Soudjoud 💖</title>
+
+<style>
+body {
+    margin:0;
+    background:black;
+    color:white;
+    text-align:center;
+    font-family: Arial;
+    overflow:hidden;
+}
+
+#start {
+    position:absolute;
+    top:40%;
+    width:100%;
+}
+
+button {
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    background:#ff4d6d;
+    color:white;
+    border-radius:10px;
+}
+
+#story {
+    display:none;
+    margin-top:40%;
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+img {
+    width:250px;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0 0 20px pink;
+}
+
+.final {
+    display:none;
+    position:absolute;
+    top:30%;
+    width:100%;
+    font-size:24px;
+    animation: zoom 2s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0);}
+    to {transform:scale(1);}
+}
+</style>
+
+</head>
+<body>
+
+<div id="start">
+    <h1>🎬 Tout a commencé le jour où je t’ai vue...</h1>
+    <button onclick="next()">Continue</button>
+</div>
+
+<div id="story">
+    <h2>💖 Soudjoud 💖</h2>
+    <img src="soudjoud.jpg">
+    <p>Tu es la plus belle chose dans ma vie...</p>
+    <button onclick="end()">Fin</button>
+</div>
+
+<div class="final" id="final">
+    💖 Tu es mon histoire… et ma plus belle victoire 👑
+</div>
+
+<script>
+function next(){
+    document.getElementById("start").style.display="none";
+    document.getElementById("story").style.display="block";
+}
+
+function end(){
+    document.getElementById("story").style.display="none";
+    document.getElementById("final").style.display="block";
+}
+</script>
+
+</body>
+</html>
